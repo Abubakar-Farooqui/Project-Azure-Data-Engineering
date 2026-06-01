@@ -1,0 +1,15 @@
+{
+	"name": "ADF-April2026",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "uaenorth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "79013fc2-92ae-455b-b50b-f8187c87977f",
+		"tenantId": "1086480b-2b99-4125-8547-f1cb405a0041"
+	}
+}
