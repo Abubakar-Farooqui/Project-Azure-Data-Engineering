@@ -43,17 +43,46 @@
 				"inputs": [
 					{
 						"referenceName": "DS_source_AzSQLDB",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"schema": {
+								"value": "@pipeline().parameters.schema",
+								"type": "Expression"
+							},
+							"table_name": {
+								"value": "@pipeline().parameters.table_name",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "DS_Sink_ADLS_in_Parquet",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"file_name_in_ADLS_sink": {
+								"value": "@pipeline().parameters.Auto_file_name",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"table_name": {
+				"type": "string",
+				"defaultValue": "Customers"
+			},
+			"schema": {
+				"type": "String",
+				"defaultValue": "dbo"
+			},
+			"Auto_file_name": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
