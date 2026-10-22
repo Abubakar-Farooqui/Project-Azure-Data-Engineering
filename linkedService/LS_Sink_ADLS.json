@@ -1,0 +1,11 @@
+{
+	"name": "LS_Sink_ADLS",
+	"properties": {
+		"description": "LinkedService for Sink in ADLS for parquet format files from Azure SQL DB tables.",
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://adls4adeprax.dfs.core.windows.net/"
+		}
+	}
+}
