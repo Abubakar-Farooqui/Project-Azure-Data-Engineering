@@ -1,7 +1,7 @@
 {
-	"name": "PL_Ingest_AzureSQL_ADLS",
+	"name": "PL_Param_Ingest_AzureSQL_ADLS",
 	"properties": {
-		"description": "Pipeline to copy the tables (customer) from Azure SQL database to ADLS2.",
+		"description": "Parameterized Pipeline to copy the tables (customer) from Azure SQL database to ADLS2.",
 		"activities": [
 			{
 				"name": "Copy AZ_SQL_ADLS",
