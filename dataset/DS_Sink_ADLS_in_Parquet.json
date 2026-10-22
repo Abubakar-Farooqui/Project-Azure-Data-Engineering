@@ -5,11 +5,20 @@
 			"referenceName": "LS_Sink_ADLS",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"file_name_in_ADLS_sink": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().file_name_in_ADLS_sink",
+					"type": "Expression"
+				},
 				"folderPath": "dir_sink_bronze",
 				"fileSystem": "bronze"
 			},
